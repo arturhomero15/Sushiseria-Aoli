@@ -1,0 +1,120 @@
+body, 
+p   {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: rgb(80, 78, 78);
+    text-align: center;
+}
+
+.principal {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    grid-template-rows: 100px 450px 150px;
+    grid-template-areas: "cabecalho cabecalho" "secao barra-lateral" "rodape rodape";
+    border-collapse: collapse;
+}
+
+header {
+   grid-area: cabecalho ;
+   background-color: #9e8080; 
+
+}
+
+section {
+    grid-area: secao;
+    background-color: #ffffff; 
+    background-image: image-set(sushi);
+}
+
+aside {
+    margin-top: 2vw;
+    grid-area: barra-lateral;
+    background-color:white;  
+}
+
+footer {
+    grid-area: rodape;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #9e9d9d;
+}
+ 
+.parte2 {
+    order: initial; 
+}
+ 
+.parte1, .parte2, .parte3 {
+    width: 25%;
+    background-color: #9e9d9d; 
+    color:blue ;
+    margin: auto;
+
+}
+
+.parte2 {
+    width: 50%;
+    margin: auto;
+}
+
+.parte3 {
+    margin: auto;
+}
+
+@media(max-width: 900px) {
+    .principal {        
+    grid-template-columns: 100%;
+    grid-template-areas: "cabecalho" "secao" "barra-lateral" "rodape";
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.parte1, .parte2, .parte3 {
+    margin: 0;
+    border: solid 1px #fff;
+    width: 49%;
+}
+
+.parte2 {
+    width: 100%;
+    order: -1;
+    }
+}
+
+@media(max-width: 768px) {
+    body {
+        margin: 0 15px;
+    }
+}
+
+.principal, .parte1, .parte2, .parte3 {
+    width: 100%;
+}
+
+.titulo-header {
+    color: white;
+}
+
+.meu-botao {
+    background-color: #f1f1f1;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+}
+      
+.meu-botao2 {
+    background-color: #f1f1f1;
+    color: #331;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+}
